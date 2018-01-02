@@ -2,15 +2,12 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import Home from './components/Home';
+import Game from './components/Game';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>WHY GOD</Text>
-        <Text>WHY HAST THOU FORSAKEN ME</Text>
-        <Text>probably all the blasphemy</Text>
-      </View>
+      <RootNavigator />
     );
   }
 }
@@ -21,6 +18,12 @@ const RootNavigator = StackNavigator({
     navigationOptions: {
       headerTitle: 'Home',
     },
+  },
+  Game: {
+    screen: Game,
+    navigationOptions: {
+      headerTitle: 'Planet Emoji'
+    }
   }
 });
 
